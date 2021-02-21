@@ -83,7 +83,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(382, 861);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
+         
             // 
             // panelSignOut
             // 
@@ -149,7 +149,7 @@
             this.btnPAO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPAO.UseVisualStyleBackColor = false;
             this.btnPAO.Visible = false;
-            this.btnPAO.Click += new System.EventHandler(this.btnPAO_Click);
+            this.btnPAO.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnPalaces
             // 
@@ -170,7 +170,7 @@
             this.btnPalaces.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPalaces.UseVisualStyleBackColor = false;
             this.btnPalaces.Visible = false;
-            this.btnPalaces.Click += new System.EventHandler(this.btnSystems_Click);
+            this.btnPalaces.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnCreate
             // 
@@ -191,7 +191,7 @@
             this.btnCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Visible = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnCreate.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // panelSystems
             // 
@@ -223,7 +223,7 @@
             this.btnMemSystems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMemSystems.UseVisualStyleBackColor = false;
             this.btnMemSystems.Visible = false;
-            this.btnMemSystems.Click += new System.EventHandler(this.btnMemSystems_Click);
+            this.btnMemSystems.Click += new System.EventHandler(this.btnSubClicked_Click);
             // 
             // panelMemorizeSub
             // 
@@ -258,7 +258,7 @@
             this.btnLearn.Text = "Learn";
             this.btnLearn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLearn.UseVisualStyleBackColor = false;
-            this.btnLearn.Click += new System.EventHandler(this.btnLearn_Click);
+            this.btnLearn.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnNames
             // 
@@ -278,7 +278,7 @@
             this.btnNames.Text = "Names and faces";
             this.btnNames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNames.UseVisualStyleBackColor = false;
-            this.btnNames.Click += new System.EventHandler(this.btnNames_Click);
+            this.btnNames.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnWords
             // 
@@ -298,7 +298,7 @@
             this.btnWords.Text = "Words";
             this.btnWords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWords.UseVisualStyleBackColor = false;
-            this.btnWords.Click += new System.EventHandler(this.btnWords_Click);
+            this.btnWords.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnNumbers
             // 
@@ -318,7 +318,7 @@
             this.btnNumbers.Text = "Numbers";
             this.btnNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNumbers.UseVisualStyleBackColor = false;
-            this.btnNumbers.Click += new System.EventHandler(this.btnNumbers_Click);
+            this.btnNumbers.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnCards
             // 
@@ -338,7 +338,7 @@
             this.btnCards.Text = "Cards";
             this.btnCards.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCards.UseVisualStyleBackColor = false;
-            this.btnCards.Click += new System.EventHandler(this.btnCards_Click);
+            this.btnCards.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // panelMemorize
             // 
@@ -369,7 +369,7 @@
             this.btnMemorize.Text = "Memorize";
             this.btnMemorize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMemorize.UseVisualStyleBackColor = false;
-            this.btnMemorize.Click += new System.EventHandler(this.btnMemorize_Click);
+            this.btnMemorize.Click += new System.EventHandler(this.btnSubClicked_Click);
             // 
             // panelHomeSub
             // 
@@ -404,7 +404,7 @@
             this.btnScores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnScores.UseVisualStyleBackColor = false;
             this.btnScores.Visible = false;
-            this.btnScores.Click += new System.EventHandler(this.btnScores_Click);
+            this.btnScores.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnSignUp
             // 
@@ -424,7 +424,7 @@
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignUp.UseVisualStyleBackColor = false;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.btnSignUp.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnSignIn
             // 
@@ -444,7 +444,7 @@
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignIn.UseVisualStyleBackColor = false;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.btnSignIn.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnDashboard
             // 
@@ -465,7 +465,7 @@
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Visible = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // panelHome
             // 
@@ -497,7 +497,7 @@
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.btnSubClicked_Click);
             // 
             // panelLogo
             // 
@@ -531,7 +531,7 @@
             this.panelLayout.Name = "panelLayout";
             this.panelLayout.Size = new System.Drawing.Size(1302, 861);
             this.panelLayout.TabIndex = 1;
-            this.panelLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLayout_Paint_1);
+           
             // 
             // MenuForm
             // 
@@ -543,8 +543,7 @@
             this.Name = "MenuForm";
             this.Text = "LociPoint";
             this.Load += new System.EventHandler(this.MenuForm_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MenuForm_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MenuForm_KeyPress);
+           
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panelSignOut.ResumeLayout(false);

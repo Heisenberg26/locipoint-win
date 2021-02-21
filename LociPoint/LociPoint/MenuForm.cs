@@ -88,21 +88,55 @@ namespace LociPoint
                 changeUserControl(new DashboardUC());
             }
         }
-      
-        private void btnHome_Click(object sender, EventArgs e)
+
+        //Submenu buttons
+        private void btnSubClicked_Click(object sender, EventArgs e)
         {
-            toggleSubMenuVisibility(panelHomeSub, btnHome);
+            Button btn = (Button)sender;
+            Button[] btns = { btnHome, btnMemorize, btnMemSystems };
+            Panel[] panels = { panelHomeSub, panelMemorizeSub, panelSystemsSub };
+            int index = 0;
+            for (int i = 0; i < btns.Length; i++)
+            {
+                if (btn == btns[i])
+                {
+                    index = i;
+                }
+
+            }
+            Panel selected = panels[index];
+
+            toggleSubMenuVisibility(selected, btn);
         }
-        private void btnMemorize_Click(object sender, EventArgs e)
+        private void btnClicked_Click(object sender, EventArgs e)
         {
-            toggleSubMenuVisibility(panelMemorizeSub, btnMemorize);
+            Button btn = (Button)sender;
+            Button[] btns = {btnDashboard, btnSignIn, btnSignUp, btnScores, btnCards, btnNumbers, btnNames,
+            btnWords, btnPAO, btnPalaces, btnCreate, btnLearn};
+            UserControl[] userControls = {new DashboardUC(), new SignInUC(), new SignUpUC(),
+            new ScoresUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
+            new PAOUC(), new PalacesUC(), new CreateNewUC(), new LearnUC()
+            };
+
+            int index = 0;
+            for (int i = 0; i < btns.Length; i++)
+            {
+                if (btn == btns[i])
+                {
+                    index = i;
+                }
+
+            }
+            toggleButtonClicked(btn);
+            if(index == 1)
+            {
+                SignInUC.SignInClicked += new EventHandler(SignInUC_SignInClicked);
+            }
+            changeUserControl(userControls[index]);
+
+
         }
 
-        private void btnMemSystems_Click(object sender, EventArgs e)
-        {
-            toggleSubMenuVisibility(panelSystemsSub, btnMemSystems);
-        }
-       
 
 
         private void toggleSubMenuVisibility(Panel panel, Button btn)
@@ -196,89 +230,8 @@ namespace LociPoint
             }
 
         }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnDashboard);
-
-            changeUserControl(new DashboardUC());
-            SignInUC.comforta = comforta;
-        }
-
-        private void btnSignIn_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnSignIn);
-            changeUserControl(new SignInUC());
-            SignInUC.SignInClicked += new EventHandler(SignInUC_SignInClicked);
-        }
-
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnSignUp);
-            changeUserControl(SignUpUC.Instance);
-            
-
-        }
-
-        private void btnScores_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnScores);
-            changeUserControl(new ScoresUC());
-        }
-
-        private void btnCards_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnCards);
-            changeUserControl(CardsUC.Instance);
-        }
-
-        private void btnNumbers_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnNumbers);
-            changeUserControl(NumbersUC.Instance);
-        }
-
-        private void btnWords_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnWords);
-            changeUserControl(WordsUC.Instance);
-        }
-
-        private void btnNames_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnNames);
-            changeUserControl(NamesUC.Instance);
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnCreate);
-            changeUserControl(CreateNewUC.Instance);
-        }
-
-        private void btnSystems_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnPalaces);
-            changeUserControl(new PalacesUC());
-        }
-
-        private void btnLearn_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnLearn);
-            changeUserControl(LearnUC.Instance);
-        }
-
-        private void panelLayout_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnPAO_Click(object sender, EventArgs e)
-        {
-            toggleButtonClicked(btnPAO);
-            changeUserControl(new PAOUC());
-        }
-
+        
+  
        
         private void btnSignOut_Click(object sender, EventArgs e)
         {
@@ -301,10 +254,7 @@ namespace LociPoint
             changeUserControl(new SignInUC());
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
+       
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
         {
@@ -314,14 +264,6 @@ namespace LociPoint
             e.Graphics.DrawLine(blackPen, point1, point2);
         }
 
-        private void MenuForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
-
-        private void MenuForm_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
+      
     }
 }
