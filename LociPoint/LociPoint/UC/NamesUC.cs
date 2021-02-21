@@ -43,15 +43,19 @@ namespace LociPoint.UC
             Time recall = new Time(recallHrsText, recallMinsText, recallSecsText);
             Time[] times = { time, recall };
             int amount = Int32.Parse(amountText) ;
-
+            string[] nationalities = { "","au", "br", "ca","dk", "fi","fr","de","ir","ie","nl","nz","no","es","ch","tr",  
+                    "gb", "us" };
+            nationality = nationalities[cbCountry.SelectedIndex];
+            Console.WriteLine(nationality);
+            
             if (Error.validateInputs(inputs) && Error.validateTimes(times)) {
                 if (type.Equals("Names")){
-                    nationality = "gb";
+                    
                     MenuForm.changeUserControl(new SessionUC(SessionUC.Type.Names, amount, time, recall));
                 }
                 else
                 {
-                    nationality = "gb";
+                    
                     MenuForm.changeUserControl(new SessionUC(SessionUC.Type.NamesFaces, amount, time, recall));
                 }
                 

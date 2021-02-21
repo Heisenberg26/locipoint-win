@@ -581,6 +581,16 @@ namespace LociPoint.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon _error_90341 {
+            get {
+                object obj = ResourceManager.GetObject("_error_90341", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] Comfortaa_Bold {
@@ -597,6 +607,16 @@ namespace LociPoint.Properties {
             get {
                 object obj = ResourceManager.GetObject("Comfortaa_Regular", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon locipoint {
+            get {
+                object obj = ResourceManager.GetObject("locipoint", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSignOut = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
@@ -83,7 +84,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(382, 861);
             this.panelMenu.TabIndex = 0;
-         
             // 
             // panelSignOut
             // 
@@ -515,7 +515,7 @@
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Century Gothic", 51.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.labelLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelLogo.Location = new System.Drawing.Point(-2, 18);
+            this.labelLogo.Location = new System.Drawing.Point(3, 31);
             this.labelLogo.Name = "labelLogo";
             this.labelLogo.Size = new System.Drawing.Size(334, 85);
             this.labelLogo.TabIndex = 0;
@@ -531,7 +531,6 @@
             this.panelLayout.Name = "panelLayout";
             this.panelLayout.Size = new System.Drawing.Size(1302, 861);
             this.panelLayout.TabIndex = 1;
-           
             // 
             // MenuForm
             // 
@@ -540,10 +539,10 @@
             this.ClientSize = new System.Drawing.Size(1684, 861);
             this.Controls.Add(this.panelLayout);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuForm";
             this.Text = "LociPoint";
             this.Load += new System.EventHandler(this.MenuForm_Load);
-           
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panelSignOut.ResumeLayout(false);

@@ -76,9 +76,23 @@
             this.cbCountry.FormattingEnabled = true;
             this.cbCountry.Items.AddRange(new object[] {
             "All",
-            "England",
-            "Greece",
-            "Japan"});
+            "Australia",
+            "Brazil",
+            "Canada",
+            "Denmark",
+            "Finland",
+            "France",
+            "Germany",
+            "Iran",
+            "Ireland",
+            "Netherlands",
+            "New Zealand",
+            "Norway",
+            "Spain",
+            "Switzerland",
+            "Turkey",
+            "United Kingdom",
+            "United States"});
             this.cbCountry.Location = new System.Drawing.Point(519, 295);
             this.cbCountry.Margin = new System.Windows.Forms.Padding(4);
             this.cbCountry.Name = "cbCountry";

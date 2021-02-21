@@ -39,7 +39,7 @@
             // 
             this.lblEdit.AutoSize = true;
             this.lblEdit.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lblEdit.Location = new System.Drawing.Point(1060, 74);
+            this.lblEdit.Location = new System.Drawing.Point(1078, 107);
             this.lblEdit.Name = "lblEdit";
             this.lblEdit.Size = new System.Drawing.Size(132, 41);
             this.lblEdit.TabIndex = 54;
@@ -49,7 +49,7 @@
             // 
             this.lblRange.AutoSize = true;
             this.lblRange.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lblRange.Location = new System.Drawing.Point(609, 74);
+            this.lblRange.Location = new System.Drawing.Point(635, 107);
             this.lblRange.Name = "lblRange";
             this.lblRange.Size = new System.Drawing.Size(127, 41);
             this.lblRange.TabIndex = 53;
@@ -59,7 +59,7 @@
             // 
             this.lblSystemName.AutoSize = true;
             this.lblSystemName.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lblSystemName.Location = new System.Drawing.Point(123, 74);
+            this.lblSystemName.Location = new System.Drawing.Point(136, 107);
             this.lblSystemName.Name = "lblSystemName";
             this.lblSystemName.Size = new System.Drawing.Size(250, 41);
             this.lblSystemName.TabIndex = 52;
@@ -69,7 +69,7 @@
             // 
             this.lblPAO.AutoSize = true;
             this.lblPAO.Font = new System.Drawing.Font("Century Gothic", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lblPAO.Location = new System.Drawing.Point(553, 12);
+            this.lblPAO.Location = new System.Drawing.Point(590, 42);
             this.lblPAO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPAO.Name = "lblPAO";
             this.lblPAO.Size = new System.Drawing.Size(236, 42);
@@ -78,9 +78,10 @@
             // 
             // panel
             // 
-            this.panel.Location = new System.Drawing.Point(0, 131);
+            this.panel.AutoScroll = true;
+            this.panel.Location = new System.Drawing.Point(0, 161);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1374, 730);
+            this.panel.Size = new System.Drawing.Size(1374, 700);
             this.panel.TabIndex = 55;
             // 
             // PAOUC

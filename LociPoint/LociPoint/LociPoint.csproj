@@ -193,6 +193,8 @@
       <DependentUpon>SignUpUC.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <None Include="Resources\untitled.ico" />
+    <None Include="Resources\-error_90341.ico" />
     <EmbeddedResource Include="ErrorForm.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
