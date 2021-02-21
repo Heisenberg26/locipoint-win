@@ -64,13 +64,15 @@
             // 
             // btnScore
             // 
+            this.btnScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
             this.btnScore.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnScore.Location = new System.Drawing.Point(616, 163);
             this.btnScore.Name = "btnScore";
             this.btnScore.Size = new System.Drawing.Size(166, 60);
             this.btnScore.TabIndex = 15;
             this.btnScore.Text = "Score";
-            this.btnScore.UseVisualStyleBackColor = true;
+            this.btnScore.UseVisualStyleBackColor = false;
             this.btnScore.Visible = false;
             this.btnScore.Click += new System.EventHandler(this.btnScore_Click);
             // 
@@ -137,24 +139,28 @@
             // 
             // btnStop
             // 
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
             this.btnStop.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnStop.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnStop.Location = new System.Drawing.Point(705, 92);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(160, 60);
             this.btnStop.TabIndex = 8;
             this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnStart
             // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
             this.btnStart.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnStart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnStart.Location = new System.Drawing.Point(534, 92);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(160, 60);
             this.btnStart.TabIndex = 7;
             this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // panelSession

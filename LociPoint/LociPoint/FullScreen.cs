@@ -22,7 +22,7 @@ namespace LociPoint
 
         private void TargetForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.F11)
+            if (e.KeyData == Keys.F11 || e.KeyData == Keys.Escape)
             {
                 Toggle();
             }

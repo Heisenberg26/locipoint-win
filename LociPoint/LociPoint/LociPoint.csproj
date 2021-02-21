@@ -61,6 +61,12 @@
     <Compile Include="APIHelper.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Error.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FullScreen.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="MenuForm.cs">
@@ -187,6 +193,9 @@
       <DependentUpon>SignUpUC.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Comfortaa-Bold.ttf" />
     <None Include="Resources\wordsImg.png" />
     <None Include="Resources\vectorstock_9655696.png" />

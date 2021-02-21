@@ -43,12 +43,12 @@
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(368, 459);
+            this.labelError.Location = new System.Drawing.Point(356, 459);
             this.labelError.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(661, 30);
+            this.labelError.Size = new System.Drawing.Size(694, 30);
             this.labelError.TabIndex = 13;
-            this.labelError.Text = "The username or password you\'ve entered is incorrect.";
+            this.labelError.Text = "The username or password you have entered is incorrect.";
             this.labelError.Visible = false;
             // 
             // lblSignIn

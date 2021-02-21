@@ -45,9 +45,9 @@
             this.lblSignUp.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblSignUp.Location = new System.Drawing.Point(507, 392);
             this.lblSignUp.Name = "lblSignUp";
-            this.lblSignUp.Size = new System.Drawing.Size(339, 28);
+            this.lblSignUp.Size = new System.Drawing.Size(329, 28);
             this.lblSignUp.TabIndex = 18;
-            this.lblSignUp.Text = "Sign Up to save your scores!";
+            this.lblSignUp.Text = "Sign In to save your scores!";
             // 
             // lblStatistics
             // 
@@ -91,35 +91,43 @@
             // 
             // btnSignUp
             // 
-            this.btnSignUp.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSignUp.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSignUp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSignUp.Location = new System.Drawing.Point(486, 434);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(374, 117);
             this.btnSignUp.TabIndex = 17;
-            this.btnSignUp.Text = "Sign Up";
-            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Text = "Sign In";
+            this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Visible = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSubmit.Location = new System.Drawing.Point(486, 434);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(374, 117);
             this.btnSubmit.TabIndex = 15;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Visible = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSave.Location = new System.Drawing.Point(486, 434);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(374, 117);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save score";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -138,14 +146,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblDateVal);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblSignUp);
             this.Controls.Add(this.lblStatistics);
             this.Controls.Add(this.lblScoreNumber);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblScore);
-            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSignUp);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ScoreUC";

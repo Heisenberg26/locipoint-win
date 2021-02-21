@@ -27,7 +27,12 @@ namespace LociPoint.UC
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            MenuForm.changeUserControl(SignUpUC.Instance);
+            SignInUC.saveScore = true;
+            SignInUC.score = new Score();
+            SignInUC.score.value = Score;
+            SignInUC.score.type = Type;
+            SignInUC.score.date = Date;
+            MenuForm.changeUserControl(new SignInUC());
         }
 
         private void btnSave_Click(object sender, EventArgs e)

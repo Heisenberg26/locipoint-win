@@ -12,6 +12,9 @@ namespace LociPoint.UC
         public static int userId;
         public static event EventHandler SignInClicked;
         public static bool _signedIn;
+        internal static bool saveScore = false;
+        public static Score score;
+
         public static bool SignedIn
         {
             get
@@ -77,6 +80,19 @@ namespace LociPoint.UC
                 userId = users[0].Id;
                 SignUpUC.SignedUp = false;
                 user = users[0];
+                if (SignInUC.saveScore)
+                {
+                    keys = new string[]{ "@value", "@type", "@userId", "@date" };
+                    object[] vals = { score.value, score.type, SignInUC.userId, score.date };
+
+
+
+                    string createScore = "INSERT INTO Scores( value, type, userId, date)  VALUES ( @value, @type, @userId, @date)";
+                    Database.executeQuery(createScore, Input.generateDictionary(keys, vals));
+                    MenuForm.changeUserControl(new ScoresUC());
+                    saveScore = false;
+
+                }
                 Console.WriteLine(user.FirstName);
                 //user is signed in
             }

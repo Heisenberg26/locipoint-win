@@ -63,7 +63,9 @@ namespace LociPoint
         }
         public static void showErrorMessage()
         {
-            MessageBox.Show(Error.message, Error.title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            ErrorForm errorForm = new ErrorForm(Error.message, Error.title);
+            errorForm.ShowDialog();
+            //MessageBox.Show(Error.message, Error.title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

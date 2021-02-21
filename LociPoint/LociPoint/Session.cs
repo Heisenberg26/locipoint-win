@@ -122,7 +122,7 @@ namespace LociPoint
                 {
                     string[] lines = File.ReadAllLines(file);
                     Console.WriteLine("File exists");
-                    int x = 40; int y = 10;
+                    int x = panel.Width/2 +10; int y = 10;
 
                     Random rand = new Random();
 
@@ -294,7 +294,7 @@ namespace LociPoint
         public static void generateTbs(int amount, Panel panel, bool customizeTbs, bool order)
         {
             myTextboxList.Clear();
-            int x = 200, y = 10;
+            int x = panel.Width/2 - 350, y = 10;
 
             for (int i = 0; i < amount; i++)
             {
@@ -311,7 +311,7 @@ namespace LociPoint
 
                 if (i % 5 == 0 && i != 0) //new line, x and y change
                 {
-                    x = 10;
+                    x = panel.Width / 2 - 350;
                     y += 40;
                     tbRecall.Location = new Point(x, y);
                 }
