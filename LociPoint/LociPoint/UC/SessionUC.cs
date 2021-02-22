@@ -47,6 +47,7 @@ namespace LociPoint.UC
            
             btnStart.Hide();
             btnStop.Show();
+            btnRecall.Show();
 
         }
 
@@ -89,9 +90,11 @@ namespace LociPoint.UC
                 {
                     lblMemo.Text = "Press Start to begin recall phase";
                     lblMemo.Show();
+                    
                 }
                 else
                 {
+                    btnRecall.Hide();
                     btnScore.Show();
 
                 }
@@ -119,7 +122,15 @@ namespace LociPoint.UC
         private void initializeSession(bool memorize)
         {
             panelSession.Controls.Clear();
-            Time.formatTime(lblHrs, lblMins, lblSecs);
+            if (memorize)
+            {
+                Time.formatTime(lblHrs, lblMins, lblSecs);
+            }
+            else
+            {
+                Recall.formatTime(lblHrs, lblMins, lblSecs);
+            }
+           
             Session.panel = panelSession;
             switch (_type)
             {
@@ -178,6 +189,19 @@ namespace LociPoint.UC
             MenuForm.changeUserControl(new ScoreUC(Score.calculateScore(Session.memoList, Session.recallList), _type.ToString(), DateTime.UtcNow.ToString("dd/MM/yyyy")));
             Session.memoList.Clear();
             Session.urls.Clear();
+        }
+
+        private void btnRecall_Click(object sender, EventArgs e)
+        {
+            lblMemo.Hide();
+            initializeSession(false);
+            timer.Stop();
+
+            timer2.Start();
+            btnRecall.Hide();
+            btnScore.Show();
+            
+
         }
     }
 }

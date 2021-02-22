@@ -42,11 +42,13 @@
             this.panelSession = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnRecall = new System.Windows.Forms.Button();
             this.panelTimer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTimer
             // 
+            this.panelTimer.Controls.Add(this.btnRecall);
             this.panelTimer.Controls.Add(this.btnScore);
             this.panelTimer.Controls.Add(this.lblMemo);
             this.panelTimer.Controls.Add(this.lblColon1);
@@ -184,6 +186,20 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // btnRecall
+            // 
+            this.btnRecall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnRecall.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnRecall.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRecall.Location = new System.Drawing.Point(616, 158);
+            this.btnRecall.Name = "btnRecall";
+            this.btnRecall.Size = new System.Drawing.Size(166, 60);
+            this.btnRecall.TabIndex = 16;
+            this.btnRecall.Text = "Recall";
+            this.btnRecall.UseVisualStyleBackColor = false;
+            this.btnRecall.Visible = false;
+            this.btnRecall.Click += new System.EventHandler(this.btnRecall_Click);
+            // 
             // SessionUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -216,5 +232,6 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label lblMemo;
         private System.Windows.Forms.Button btnScore;
+        private System.Windows.Forms.Button btnRecall;
     }
 }
