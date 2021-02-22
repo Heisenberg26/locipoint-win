@@ -93,6 +93,12 @@
     <Compile Include="Score.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Time.cs" />
+    <Compile Include="UC\FAQUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\FAQUC.Designer.cs">
+      <DependentUpon>FAQUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\ImageRecallUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,6 +287,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC\FAQUC.resx">
+      <DependentUpon>FAQUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\ImageRecallUC.resx">
       <DependentUpon>ImageRecallUC.cs</DependentUpon>
     </EmbeddedResource>

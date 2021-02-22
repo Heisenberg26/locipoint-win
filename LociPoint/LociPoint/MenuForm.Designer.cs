@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSignOut = new System.Windows.Forms.Panel();
+            this.panelQuit = new System.Windows.Forms.Panel();
+            this.btnQuit = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.panelSystemsSub = new System.Windows.Forms.Panel();
             this.btnPAO = new System.Windows.Forms.Button();
@@ -47,6 +49,7 @@
             this.panelMemorize = new System.Windows.Forms.Panel();
             this.btnMemorize = new System.Windows.Forms.Button();
             this.panelHomeSub = new System.Windows.Forms.Panel();
+            this.btnFAQ = new System.Windows.Forms.Button();
             this.btnScores = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
@@ -56,10 +59,9 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.labelLogo = new System.Windows.Forms.Label();
             this.panelLayout = new System.Windows.Forms.Panel();
-            this.panelQuit = new System.Windows.Forms.Panel();
-            this.btnQuit = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelSignOut.SuspendLayout();
+            this.panelQuit.SuspendLayout();
             this.panelSystemsSub.SuspendLayout();
             this.panelSystems.SuspendLayout();
             this.panelMemorizeSub.SuspendLayout();
@@ -67,7 +69,6 @@
             this.panelHomeSub.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelQuit.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -94,10 +95,41 @@
             this.panelSignOut.Controls.Add(this.panelQuit);
             this.panelSignOut.Controls.Add(this.btnSignOut);
             this.panelSignOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSignOut.Location = new System.Drawing.Point(0, 1036);
+            this.panelSignOut.Location = new System.Drawing.Point(0, 1093);
             this.panelSignOut.Name = "panelSignOut";
             this.panelSignOut.Size = new System.Drawing.Size(365, 134);
             this.panelSignOut.TabIndex = 8;
+            // 
+            // panelQuit
+            // 
+            this.panelQuit.AutoSize = true;
+            this.panelQuit.Controls.Add(this.btnQuit);
+            this.panelQuit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelQuit.Location = new System.Drawing.Point(0, 67);
+            this.panelQuit.Name = "panelQuit";
+            this.panelQuit.Size = new System.Drawing.Size(365, 67);
+            this.panelQuit.TabIndex = 4;
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnQuit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnQuit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(202)))), ((int)(((byte)(145)))));
+            this.btnQuit.FlatAppearance.BorderSize = 0;
+            this.btnQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnQuit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnQuit.Location = new System.Drawing.Point(0, 0);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnQuit.Size = new System.Drawing.Size(365, 67);
+            this.btnQuit.TabIndex = 3;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnSignOut
             // 
@@ -128,7 +160,7 @@
             this.panelSystemsSub.Controls.Add(this.btnPalaces);
             this.panelSystemsSub.Controls.Add(this.btnCreate);
             this.panelSystemsSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSystemsSub.Location = new System.Drawing.Point(0, 865);
+            this.panelSystemsSub.Location = new System.Drawing.Point(0, 922);
             this.panelSystemsSub.Name = "panelSystemsSub";
             this.panelSystemsSub.Size = new System.Drawing.Size(365, 171);
             this.panelSystemsSub.TabIndex = 7;
@@ -202,7 +234,7 @@
             this.panelSystems.AutoSize = true;
             this.panelSystems.Controls.Add(this.btnMemSystems);
             this.panelSystems.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSystems.Location = new System.Drawing.Point(0, 798);
+            this.panelSystems.Location = new System.Drawing.Point(0, 855);
             this.panelSystems.Name = "panelSystems";
             this.panelSystems.Size = new System.Drawing.Size(365, 67);
             this.panelSystems.TabIndex = 6;
@@ -238,7 +270,7 @@
             this.panelMemorizeSub.Controls.Add(this.btnNumbers);
             this.panelMemorizeSub.Controls.Add(this.btnCards);
             this.panelMemorizeSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMemorizeSub.Location = new System.Drawing.Point(0, 513);
+            this.panelMemorizeSub.Location = new System.Drawing.Point(0, 570);
             this.panelMemorizeSub.Name = "panelMemorizeSub";
             this.panelMemorizeSub.Size = new System.Drawing.Size(365, 285);
             this.panelMemorizeSub.TabIndex = 5;
@@ -349,7 +381,7 @@
             this.panelMemorize.AutoSize = true;
             this.panelMemorize.Controls.Add(this.btnMemorize);
             this.panelMemorize.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMemorize.Location = new System.Drawing.Point(0, 446);
+            this.panelMemorize.Location = new System.Drawing.Point(0, 503);
             this.panelMemorize.Name = "panelMemorize";
             this.panelMemorize.Size = new System.Drawing.Size(365, 67);
             this.panelMemorize.TabIndex = 4;
@@ -378,6 +410,7 @@
             // panelHomeSub
             // 
             this.panelHomeSub.AutoSize = true;
+            this.panelHomeSub.Controls.Add(this.btnFAQ);
             this.panelHomeSub.Controls.Add(this.btnScores);
             this.panelHomeSub.Controls.Add(this.btnSignUp);
             this.panelHomeSub.Controls.Add(this.btnSignIn);
@@ -385,9 +418,29 @@
             this.panelHomeSub.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHomeSub.Location = new System.Drawing.Point(0, 218);
             this.panelHomeSub.Name = "panelHomeSub";
-            this.panelHomeSub.Size = new System.Drawing.Size(365, 228);
+            this.panelHomeSub.Size = new System.Drawing.Size(365, 285);
             this.panelHomeSub.TabIndex = 3;
             this.panelHomeSub.Visible = false;
+            // 
+            // btnFAQ
+            // 
+            this.btnFAQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(30)))));
+            this.btnFAQ.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFAQ.FlatAppearance.BorderSize = 0;
+            this.btnFAQ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(202)))), ((int)(((byte)(145)))));
+            this.btnFAQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(202)))), ((int)(((byte)(145)))));
+            this.btnFAQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFAQ.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnFAQ.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFAQ.Location = new System.Drawing.Point(0, 228);
+            this.btnFAQ.Name = "btnFAQ";
+            this.btnFAQ.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFAQ.Size = new System.Drawing.Size(365, 57);
+            this.btnFAQ.TabIndex = 4;
+            this.btnFAQ.Text = "About Us";
+            this.btnFAQ.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFAQ.UseVisualStyleBackColor = false;
+            this.btnFAQ.Click += new System.EventHandler(this.btnClicked_Click);
             // 
             // btnScores
             // 
@@ -528,6 +581,7 @@
             // 
             // panelLayout
             // 
+            this.panelLayout.AutoSize = true;
             this.panelLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(202)))), ((int)(((byte)(145)))));
             this.panelLayout.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -535,37 +589,6 @@
             this.panelLayout.Name = "panelLayout";
             this.panelLayout.Size = new System.Drawing.Size(1302, 861);
             this.panelLayout.TabIndex = 1;
-            // 
-            // panelQuit
-            // 
-            this.panelQuit.AutoSize = true;
-            this.panelQuit.Controls.Add(this.btnQuit);
-            this.panelQuit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQuit.Location = new System.Drawing.Point(0, 67);
-            this.panelQuit.Name = "panelQuit";
-            this.panelQuit.Size = new System.Drawing.Size(365, 67);
-            this.panelQuit.TabIndex = 4;
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnQuit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQuit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(202)))), ((int)(((byte)(145)))));
-            this.btnQuit.FlatAppearance.BorderSize = 0;
-            this.btnQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnQuit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnQuit.Location = new System.Drawing.Point(0, 0);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnQuit.Size = new System.Drawing.Size(365, 67);
-            this.btnQuit.TabIndex = 3;
-            this.btnQuit.Text = "Quit";
-            this.btnQuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuit.UseVisualStyleBackColor = false;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // MenuForm
             // 
@@ -582,6 +605,7 @@
             this.panelMenu.PerformLayout();
             this.panelSignOut.ResumeLayout(false);
             this.panelSignOut.PerformLayout();
+            this.panelQuit.ResumeLayout(false);
             this.panelSystemsSub.ResumeLayout(false);
             this.panelSystems.ResumeLayout(false);
             this.panelMemorizeSub.ResumeLayout(false);
@@ -590,8 +614,8 @@
             this.panelHome.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            this.panelQuit.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -626,6 +650,7 @@
         private System.Windows.Forms.Label labelLogo;
         private System.Windows.Forms.Panel panelQuit;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnFAQ;
     }
 }
 

@@ -27,7 +27,7 @@ namespace LociPoint
         public static Panel ActivePanel;
         public static UserControl ActiveUserControl;
         UserControl[] userControls = {new DashboardUC(), new SignInUC(), new SignUpUC(),
-            new ScoresUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
+            new ScoresUC(),new FAQUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
             new PAOUC(), new PalacesUC(), new CreateNewUC(), new LearnUC()
             };
 
@@ -202,10 +202,10 @@ namespace LociPoint
         {
             Button btn = (Button)sender;
             UserControl[] userControls = {new DashboardUC(), new SignInUC(), new SignUpUC(),
-            new ScoresUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
+            new ScoresUC(), new FAQUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
             new PAOUC(), new PalacesUC(), new CreateNewUC(), new LearnUC()
             };
-            Button[] submenuBtns = {btnDashboard, btnSignIn, btnSignUp, btnScores, btnCards, btnNumbers, btnNames,
+            Button[] submenuBtns = {btnDashboard, btnSignIn, btnSignUp, btnScores,btnFAQ, btnCards, btnNumbers, btnNames,
             btnWords, btnPAO, btnPalaces, btnCreate, btnLearn};
             
 
@@ -248,7 +248,7 @@ namespace LociPoint
         }
         private void toggleButtonClicked(Button btn)
         {
-            Button[] btns = {btnDashboard, btnSignIn, btnSignUp, btnScores, btnCards, btnNumbers, btnNames,
+            Button[] btns = {btnDashboard, btnSignIn, btnSignUp, btnScores, btnFAQ, btnCards, btnNumbers, btnNames,
             btnWords, btnPAO, btnPalaces, btnCreate, btnLearn};
             Color original = Color.FromArgb(21, 22, 30);
             Color newColor = Color.FromArgb(67, 202, 145);
