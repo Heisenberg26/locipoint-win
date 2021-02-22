@@ -137,13 +137,13 @@ namespace LociPoint.UC
                     break;
 
                 case Type.Words:
-                    var projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-                    string words = Path.Combine(projectPath, "Resources/words.txt");
-                    Session.wordsSession(Amount, memorize, words, true);
+
+                    string words = Properties.Resources.ResourceManager.GetString("words");
+                    Session.wordsSession(Amount, memorize, words);
                     break;
                 case Type.Text:
                     string file = LearnUC.filenames[0];
-                    Session.wordsSession(Amount, memorize, file,false);
+                    Session.textSession(Amount, memorize, file);
                     break;
          
             }

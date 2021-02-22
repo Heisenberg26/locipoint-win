@@ -206,7 +206,7 @@
     <None Include="Resources\wordsImg.png" />
     <None Include="Resources\vectorstock_9655696.png" />
     <None Include="Resources\icons8-user-96.png" />
-    <None Include="Resources\words.txt" />
+    <EmbeddedResource Include="Resources\words.txt" />
     <None Include="Resources\51.png" />
     <None Include="Resources\50.png" />
     <None Include="Resources\49.png" />
@@ -263,7 +263,7 @@
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>

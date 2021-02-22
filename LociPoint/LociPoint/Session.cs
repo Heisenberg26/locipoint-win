@@ -110,32 +110,30 @@ namespace LociPoint
 
             }
         }
-        public static void wordsSession(int amount, bool memorize, string file, bool words)
+        public static void textSession(int amount, bool memorize, string file)
         {
             recallList.Clear();
             if (memorize)
             {
-                
 
                
                 if (File.Exists(file))
                 {
                     string[] lines = File.ReadAllLines(file);
-                    Console.WriteLine("File exists");
-                    int x = panel.Width/2 +10; int y = 10;
+                    Console.WriteLine(file);
+                    int x  = panel.Left + 50;
+                  
+                    int y = 10;
 
-                    Random rand = new Random();
+                 
 
                     for (int i = 0; i < amount; i++)
                     {
                         Label lblWords = new Label();
-                        Font font = new Font("Century Gothic", 15f);
+                        Font font = new Font("Century Gothic", 20f);
                         string line = lines[i];
-                        if (words) {
-                            line = lines[rand.Next(lines.Length)];
-                        }
                         
-                      
+
                         lblWords.Font = font;
                         lblWords.Text = line;
                         lblWords.Name = "lblWords" + i;
@@ -144,7 +142,7 @@ namespace LociPoint
                         lblWords.Location = new Point(x, y);
 
 
-                        y += 20;
+                        y += 30;
                    
 
                         panel.Controls.Add(lblWords);
@@ -154,6 +152,11 @@ namespace LociPoint
 
                 else
                 {
+                    Label lblWords = new Label();
+                    Font font = new Font("Century Gothic", 20f);
+                    lblWords.Text = "File does not exist";
+                    lblWords.AutoSize = true;
+                    panel.Controls.Add(lblWords);
                     Console.WriteLine("File doesn't exist");
                 }
             }
@@ -161,6 +164,50 @@ namespace LociPoint
             {
                 generateTbs(amount, panel, false,false);
               
+
+            }
+        }
+        public static void wordsSession(int amount, bool memorize, string file)
+        {
+            recallList.Clear();
+            if (memorize)
+            {
+                string[] lines = file.Split(new[] { "\r\n", "\r", "\n" },StringSplitOptions.None);
+                Console.WriteLine("Lines 0 : " + lines[0]);
+                int x = panel.Width / 2 - 50;
+
+                int y = 10;
+
+                Random rand = new Random();
+
+                for (int i = 0; i < amount; i++)
+                {
+                    Label lblWords = new Label();
+                    Font font = new Font("Century Gothic", 20f);
+                    string line = lines[rand.Next(lines.Length)];
+                    Console.WriteLine(line);
+
+
+                    lblWords.Font = font;
+                    lblWords.Text = line;
+                    lblWords.Name = "lblWords" + i;
+                    lblWords.AutoSize = true;
+
+                    lblWords.Location = new Point(x, y);
+
+
+                    y += 30;
+
+
+                    panel.Controls.Add(lblWords);
+                    memoList.Add(lblWords.Text);
+                }
+
+
+            }
+            else
+            {
+                generateTbs(amount, panel, false, false);
 
             }
         }
