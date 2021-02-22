@@ -264,6 +264,10 @@ namespace LociPoint
             e.Graphics.DrawLine(blackPen, point1, point2);
         }
 
-      
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            QuitForm quitForm = new QuitForm("Are you sure you want to quit?","Quit");
+            quitForm.ShowDialog();
+        }
     }
 }
