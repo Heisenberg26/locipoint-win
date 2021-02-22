@@ -32,6 +32,7 @@ namespace LociPoint.UC
             string query = "SELECT * FROM Palaces WHERE userId = @userId";
             string[] keys = { "@userId" };
             object[] vals = { SignInUC.userId};
+            Console.WriteLine("SIGN IN "+ SignInUC.userId);
             palaces = Database.selectionQuery<Palace>(query, Input.generateDictionary(keys, vals));
 
             int y = lblPalaceName.Location.Y - 110;

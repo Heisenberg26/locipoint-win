@@ -36,9 +36,9 @@ namespace LociPoint.UC
             object[] values = new object[] { paoId};
             List<Pao> paoList = Database.selectionQuery<Pao>(query, Input.generateDictionary(keys, values));
             pao = paoList[0];
-            strPeople = Input.generateArr(pao.people,',');
-            strActions = Input.generateArr(pao.actions, ',');
-            strObjects = Input.generateArr(pao.objects, ',');
+            strPeople = Input.generateArr(pao.people);
+            strActions = Input.generateArr(pao.actions);
+            strObjects = Input.generateArr(pao.objects);
             Console.WriteLine(strPeople.Length);
             int y = lblEdit.Location.Y - 110;
           

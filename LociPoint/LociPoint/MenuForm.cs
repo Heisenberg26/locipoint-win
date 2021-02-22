@@ -22,14 +22,25 @@ namespace LociPoint
         public static Font comforta { get; set; }
         public static Font comfortaXL { get; set; }
         public static Font comfortaL { get; set; }
+        public Button ActiveButton;
+
+        public static Panel ActivePanel;
+        public static UserControl ActiveUserControl;
+        UserControl[] userControls = {new DashboardUC(), new SignInUC(), new SignUpUC(),
+            new ScoresUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
+            new PAOUC(), new PalacesUC(), new CreateNewUC(), new LearnUC()
+            };
+
         public static Panel MenuPanel;
+
+        public static MenuForm instance;
         FullScreen fullScreen;
         internal static bool fullscreen = false;
 
         public MenuForm()
         {
             InitializeComponent();
-
+            instance = this;
             //set font data
             byte[] comfortaData = Properties.Resources.Comfortaa_Regular;
             byte[] comfortaBoldData = Properties.Resources.Comfortaa_Bold;
@@ -70,6 +81,11 @@ namespace LociPoint
         }
         protected void SignInUC_SignInClicked(object sender, EventArgs e)
         {
+            signIn();
+        }
+
+        private void signIn()
+        {
             //handle SignIn event of SignInUC
             if (SignInUC.SignedIn)
             {
@@ -77,7 +93,7 @@ namespace LociPoint
                 btnMemSystems.Show();
                 btnPalaces.Show();
                 btnPAO.Show();
-                
+
                 btnScores.Show();
                 btnSignOut.Show();
                 btnCreate.Show();
@@ -87,6 +103,80 @@ namespace LociPoint
                 toggleButtonClicked(btnDashboard);
                 changeUserControl(new DashboardUC());
             }
+        }
+        private void signOut()
+        {
+            SignInUC.SignedIn = false;
+            SignUpUC.SignedUp = false;
+            SignInUC.userId = -1;
+            btnDashboard.Hide();
+            btnScores.Hide();
+            btnMemSystems.Hide();
+            btnPalaces.Hide();
+            btnPAO.Hide();
+            btnCreate.Hide();
+            btnSignOut.Hide();
+            btnScores.Hide();
+
+            btnSignIn.Show();
+            btnSignUp.Show();
+            toggleSubMenuVisibility(panelHomeSub, btnHome);
+            toggleButtonClicked(btnSignIn);
+            changeUserControl(new SignInUC());
+        }
+        public void changeMenu(UserControl userControl)
+        {
+            setSelected(userControl);
+            toggleSubMenuVisibility(ActivePanel, ActiveButton);
+            toggleButtonClicked(ActiveButton);
+            changeUserControl(userControl);
+            
+        }
+
+        private void setSelected(UserControl userControl)
+        {
+            ActiveUserControl = userControl;
+
+            ActivePanel = setPanel(userControl);
+            ActiveButton = setButton(userControl);
+            Console.WriteLine(ActivePanel.Visible);
+           
+        }
+
+        private Button setButton(UserControl userControl)
+        {
+            Button btn = btnCards;
+            UserControl[] userControls = {new CardsUC(), new NumbersUC(),
+                new WordsUC(), new NamesUC(),
+                new ScoresUC(),new PAOUC(), new PalacesUC()};
+            Button[] btns = { btnCards, btnNumbers, btnWords, btnNames, btnScores, btnPAO, btnPalaces};
+            for(int i =0; i<userControls.Length; i++)
+            {
+                Type type = userControls[i].GetType();
+                if(userControl.GetType() == type)
+                {
+                    btn = btns[i];
+                }
+            }
+            return btn;
+        }
+
+        private Panel setPanel(UserControl userControl)
+        {
+            Panel panel = panelHome;
+            UserControl[] userControls = {new CardsUC(), new NumbersUC(),
+                new WordsUC(), new NamesUC(),
+                new ScoresUC(),new PAOUC(), new PalacesUC()};
+            Panel[] panels = { panelMemorizeSub, panelMemorizeSub, panelMemorizeSub, panelMemorizeSub, panelHomeSub,panelSystemsSub, panelSystemsSub };
+            for (int i = 0; i < userControls.Length; i++)
+            {
+                Type type = userControls[i].GetType();
+                if (userControl.GetType() == type)
+                {
+                    panel = panels[i];
+                }
+            }
+            return panel;
         }
 
         //Submenu buttons
@@ -111,27 +201,25 @@ namespace LociPoint
         private void btnClicked_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Button[] btns = {btnDashboard, btnSignIn, btnSignUp, btnScores, btnCards, btnNumbers, btnNames,
-            btnWords, btnPAO, btnPalaces, btnCreate, btnLearn};
             UserControl[] userControls = {new DashboardUC(), new SignInUC(), new SignUpUC(),
             new ScoresUC(), new CardsUC(), new NumbersUC(), new NamesUC(), new WordsUC(),
             new PAOUC(), new PalacesUC(), new CreateNewUC(), new LearnUC()
             };
+            Button[] submenuBtns = {btnDashboard, btnSignIn, btnSignUp, btnScores, btnCards, btnNumbers, btnNames,
+            btnWords, btnPAO, btnPalaces, btnCreate, btnLearn};
+            
 
             int index = 0;
-            for (int i = 0; i < btns.Length; i++)
+            for (int i = 0; i < submenuBtns.Length; i++)
             {
-                if (btn == btns[i])
+                if (btn == submenuBtns[i])
                 {
                     index = i;
                 }
 
             }
             toggleButtonClicked(btn);
-            if(index == 1)
-            {
-                SignInUC.SignInClicked += new EventHandler(SignInUC_SignInClicked);
-            }
+         
             changeUserControl(userControls[index]);
 
 
@@ -165,7 +253,8 @@ namespace LociPoint
             Color original = Color.FromArgb(21, 22, 30);
             Color newColor = Color.FromArgb(67, 202, 145);
             toggleColor(btns, btn,original,newColor);
-
+            ActiveButton = btn;
+           
         }
         public static void setFontType(Control control, Font font, Type type) {
 
@@ -214,6 +303,7 @@ namespace LociPoint
             {
                 panel.Show();
             }
+            ActivePanel = panel;
         }
         public static void changeUserControl(UserControl userControl)
         {
@@ -228,6 +318,7 @@ namespace LociPoint
             {
                 userControl.BringToFront();
             }
+            ActiveUserControl = userControl;
 
         }
         
@@ -235,23 +326,7 @@ namespace LociPoint
        
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-            SignInUC.SignedIn = false;
-            SignUpUC.SignedUp = false;
-            SignInUC.userId = -1;
-            btnDashboard.Hide();
-            btnScores.Hide();
-            btnMemSystems.Hide();
-            btnPalaces.Hide();
-            btnPAO.Hide();
-            btnCreate.Hide();
-            btnSignOut.Hide();
-            btnScores.Hide();
-
-            btnSignIn.Show();
-            btnSignUp.Show();
-            toggleSubMenuVisibility(panelHomeSub, btnHome);
-            toggleButtonClicked(btnSignIn);
-            changeUserControl(new SignInUC());
+            signOut();
         }
 
        

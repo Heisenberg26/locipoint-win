@@ -69,7 +69,8 @@ namespace LociPoint.UC
             string createPalace = "INSERT INTO Pao (userId, people, actions,objects,peopleIds,actionsIds,objectsIds,paoName,range) VALUES( @userId,@people,@actions,@objects,@peopleIds, @actionsIds,@objectsIds,@paoName,@range)";
             Database.executeQuery(createPalace, Input.generateDictionary(keys, values));
 
-            MenuForm.changeUserControl(new PAOUC());
+            MenuForm.instance.changeMenu(new PAOUC());
+
 
         }
         private void createPalace(int rooms, string name)
@@ -91,8 +92,8 @@ namespace LociPoint.UC
             {
                 Database.executeQuery(createRooms, Input.generateDictionary(keys, values));
             }
-            MenuForm.changeUserControl(new PalacesUC());
-           
+            MenuForm.instance.changeMenu(new PalacesUC());
+
 
         }
         private string getPalaceId(int userId,string palaceName)

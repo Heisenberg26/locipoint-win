@@ -45,7 +45,10 @@ namespace LociPoint.UC
             
             string createScore = "INSERT INTO Scores( value, type, userId, date)  VALUES ( @value, @type, @userId, @date)";
             Database.executeQuery(createScore, Input.generateDictionary(keys, vals));
-            MenuForm.changeUserControl(new ScoresUC());
+           
+
+            MenuForm.instance.changeMenu(new ScoresUC());
+
         }
 
         private void ScoreUC_Load(object sender, EventArgs e)

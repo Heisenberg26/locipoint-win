@@ -50,10 +50,10 @@ namespace LociPoint
             return parameters;
         }
 
-        internal static string[] generateArr(string str, char delimiter)
+        internal static string[] generateArr(string str)
         { 
             
-            return str.Split(delimiter);
+            return str.Split(',');
         }
 
         public static List<string> convertTb(List<TextBox> myTextboxList, bool split)
