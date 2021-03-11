@@ -5,4 +5,3 @@ Creating a LociPoint account will always be free of charge. Once you sign up a v
 # Setup
 [Inno Installer](https://github.com/Heisenberg26/locipoint-win/raw/master/LociPoint/Setup/LociPointInstaller.exe)
 
-# Frequently Asked Questions
